@@ -1,7 +1,13 @@
-# What would have to be changed to make the code in Figure 3.3 work for finding
-# an approximation to the cube root of both negative and positive numbers?
-# (Hint: think about changing low to ensure that the answer lies within the region being searched.)
+# Let s be a string that contains a sequence of decimal numbers separated by
+# commas, e.g., s = '1.23,2.4,3.123'. Write a program that prints the sum of
+# the numbers in s.
 #
-# 그림 3.3의 코드에서 음수와 양수 모두의 세제곱근을 구할 수 있도록 하려면
-# 무엇을 바꿔야 할까요?
-# (힌트: 탐색 범위 안에 답이 포함되도록 low 값을 바꾸는 것을 생각해보세요.)
+# s를 소수점 숫자들이 쉼표로 구분된 문자열이라고 할 때, 예를 들어 s = '1.23,2.4,3.123'
+# s에 있는 숫자들의 합을 출력하는 프로그램을 작성하세요.
+
+s = '1.23,2.4,3.123'
+total = 0
+for num in s.split(','):
+    total += float(num)
+
+print(total)
