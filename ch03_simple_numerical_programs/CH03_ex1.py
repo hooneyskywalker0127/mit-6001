@@ -10,7 +10,7 @@ num = int(input("정수를 입력하세요"))
 
 found = False
 for pwr in range(1,6):
-    root = num**(1/pwr)
+    root = round(num**(1/pwr))
     if root ** pwr == num:
         print(f"root = {root}, pwr = {pwr}")
         found = True
