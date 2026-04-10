@@ -5,3 +5,16 @@
 # 사용자에게 정수를 입력받아 두 정수 root와 pwr을 출력하는 프로그램을 작성하세요.
 # 단, 0 < pwr < 6 이어야 하며, root**pwr이 입력한 정수와 같아야 합니다.
 # 해당하는 정수 쌍이 없다면 그에 관련한 메시지를 출력하세요.
+
+num = int(input("정수를 입력하세요"))
+
+found = False
+for pwr in range(1,6):
+    root = num**(1/pwr)
+    if root ** pwr == num:
+        print(f"root = {root}, pwr = {pwr}")
+        found = True
+        break
+if not found:
+    print("해당하는 정수 쌍이 없습니다.")
+
